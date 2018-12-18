@@ -154,6 +154,36 @@ Express is unopinionated (flexible). You can insert almost any compatible middle
 Routing refers to how an application’s endpoints (URIs) respond to client requests
 
 A route is a section of Express code that associates an HTTP verb (GET, POST, PUT, DELETE, etc.), an URL path/pattern, and a function that is called to handle that pattern.
+```js
+const express = require('express')
+```
+// This simply gets the already installed framework: express on your file
+```js
+const app = express();
+```
+// This executes the express framework which is a function and stores it in a variable called app
+```js
+app.get('/dogs' , function(req, res) {
+  res.send(`
+  <li>Dob 1</li>
+  <li>Dog 2</li>
+  `)
+})
+```
+When the express framwork is executed, it has various methods like the get method.
+
+// This get method call the th path ```js '/dogs'``` then the functionis executed.
+
+// ```js req and res ``` which means request and responce
+
+
+  app.get('*', function(req, res) {
+    res.send('This is generic for nodefinite path')
+  })
+  
+  app.listen(3000, function() {
+    console.log('Lisening on port 3000')
+  })
 <!-- 
 Node
 https://medium.freecodecamp.org/understanding-the-core-of-nodejs-the-powerful-chrome-v8-engine-79e7eb8af964
