@@ -108,18 +108,52 @@ A Node.js server provides the mechanisms for connecting to a service and sending
   * **first**, it is an online repository for the publishing of open-source Node.js projects; 
   * **second**, it is a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management. 
   * **Thirdly** Another important use for npm is dependency management. When you have a node project with a package.json file, you can run npm install from the project root and npm will install all the dependencies listed in the package.json.
-  
+
+# Framework and Libries
+One could say a framework is a collection of libraries, but the idea is different.
+A library is just another module or function which is exposed to be used outside
+## Inversion of control
+**libray:** When you use a library you have the control over your code. Whenever you need something from the library you simply call it,
+
+**Framework:** On the other hand, when using a framework, the framework is doing most of the work and there are particular places where you insert your code (for ex: In react you put your html (jsx) inside the render function). Framework usually owns the “main” function. In case of react render() is the main function.
+
+So whenever the framework needs the application specific code it calls your code. So here the control is “inverted” from you to the framework. This is called inversion of control.
+
+## ***<li>Note: </li>***
+ Library gives you a set of functions/modules/APIs which you can use to solve a certain problem, but it doesn’t change your code on the structural or architectural level. On the other hand, frameworks also give you a set of functions/modules/APIs but it does change your code on the structural or architectural level. Library - you call it, Framework - it calls you.
+
+
+
+
+
+
+
 # NODE
 Node is a javascript runtime, built on Chrome's V8 javascript engine
 
-### **V8 engine:**  V8 is a powerful open source javascript engine built by Google
-### **Javscript engine:** It is a program that converts javascript code inot lower level or machine language
+### **V8 engine:**  
+V8 is a powerful open source javascript engine built by Google
+### **Javscript engine:** 
+It is a program that converts javascript code inot lower level or machine language
 ### **The Chrome V8 engine :**
 * The V8 engine is written in C++ and used in Chrome and Nodejs.
 * It implements ECMAScript as specified in ECMA-262.
 * The V8 engine can run standalone we can embed it with our own C++ program.
 
-There are different JavaScript engines including Rhino, JavaScriptCore, and SpiderMonkey. These engines follow the ECMAScript Standards. ECMAScript defines the standard for the scripting language. JavaScript is based on ECMAScript standards. These standards define how the language should work and what features it should have
+There are different JavaScript engines including Rhino, JavaScriptCore, and SpiderMonkey. These engines follow the ECMAScript Standards. ECMAScript defines the standard for the scripting language. JavaScript is based on ECMAScript standards. These standards define how the language should work and what features it should have  
+
+## Framesworks to be used
+### Express
+It is Fast, unopinionated, minimalist web framework for Node.js
+
+* Unopinionated frameworks, have far fewer restrictions on the best way to glue components together to achieve a goal, or even what components should be used. They make it easier for developers to use the most suitable tools to complete a particular task, albeit at the cost that you need to find those components yourself.
+
+Express is unopinionated (flexible). You can insert almost any compatible middleware you like into the request handling chain, in almost any order you like. You can structure the app in one file or multiple files, and using any directory structure. You may sometimes feel that you have too many choices!
+
+## Routing
+Routing refers to how an application’s endpoints (URIs) respond to client requests
+
+A route is a section of Express code that associates an HTTP verb (GET, POST, PUT, DELETE, etc.), an URL path/pattern, and a function that is called to handle that pattern.
 <!-- 
 Node
 https://medium.freecodecamp.org/understanding-the-core-of-nodejs-the-powerful-chrome-v8-engine-79e7eb8af964
@@ -147,4 +181,6 @@ https://flaviocopes.com/v8/
 3. Postman
 4. Node server'
 5. NPM
-6. Node
+6. Frameworks and libriries
+
+. Node
